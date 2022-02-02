@@ -85,9 +85,9 @@ Aine läbimiseks on vaja:
 
 Õppeaine toimub 2021/2022. õppeaasta kevadsemestril. 
 
-* **Praktikumid teisipäeviti kell 12:15** veebiseminaridena (nädalatel 24 - 27), olude paranedes kolime klassiruumi Delta-2004. 
-* **Projektide tähtaeg teisipäev, 11. mai kell 12:15** (nädal 37).
-* **Projektide ettekandmine teisipäev, 18. mai kell 12:15** (nädal 38).
+* **Praktikumid 1. rühmal esmaspäeviti kell 10:15 ruumis 2004 ja 2. rühmal teisipäeviti kell 14:15 ruumis 2030**.
+* **Projekti tähtaeg: TBD**
+* **Projektide ettekandmine: TBD**
 
 # Kontakt ja küsimused
 
@@ -96,9 +96,8 @@ Aine läbimiseks on vaja:
 -->
 
 Kaari Kuus ja Raul Niit <br>
-Delta majas (Narva mnt 18) kabinet 4079 <br>
-kaari.kuus [at] ut.ee, raul.niit [at] ut.ee
+kaari.kuus@ut.ee, raul.niit@ut.ee
 
 
-Antud kursust toetab [DataCamp](https://www.datacamp.com/). Aines osalejatel on võimalus võtta kõiki DataCamp kursuseid tasuta. Kõigest täpsemalt esimeses praktikumis.
-![](DataCamp.png "DataCamp")
+<!-- Antud kursust toetab [DataCamp](https://www.datacamp.com/). Aines osalejatel on võimalus võtta kõiki DataCamp kursuseid tasuta. Kõigest täpsemalt esimeses praktikumis. -->
+<!--  ![](DataCamp.png "DataCamp") -->
