@@ -3,11 +3,11 @@ layout: page
 title: Praktikumimaterjalid
 ---
 
-Praktikumi materjalid täienevad jooksvalt, 2019. aasta materjalidega saab tutvuda [siin](../../2019/praktikumid/).
+Praktikumi materjalid täienevad jooksvalt, 2020. aasta materjalidega saab tutvuda [siin](../../2020/praktikumid/).
 
 ## Praktikum 1
 
-09.02.2021 
+Nädal 24
 
 Sissejuhatus ainesse, reprodutseeritavasse analüüsi ja automatiseeritud statistikasse. Tarkvara R meeldetuletamine. 
 Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade. 
@@ -22,12 +22,12 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
     * [dplyr minimalistlik näide](../praktikum1_dplyr)
 * [Automaatne aktsiaturu ülevaade](../praktikum1_aktsiad)
 * [Kodutöö](../praktikum1_kodutoo)
-    * Tähtaeg 16.02.2021 kell 23:59.
+    * Tähtaeg 16.02.2022 kell 23:59.
 
 
 ## Praktikum 2
 
-16.02.2021
+Nädal 25
 
 Reprodutseeritav analüüs. Näide: Kas suur võlakoorem vähendab riigi majanduskasvu? Joonised paketiga ggplot2.
 Pettuse tuvastamine Benfordi seaduse abil.
@@ -39,11 +39,11 @@ Pettuse tuvastamine Benfordi seaduse abil.
 * [*Growth in a time of debt*: riigi võlakoormuse ja SKP vaheline seos](../praktikum2_riigivolg)
 * [Pettuse tuvastamise ülesanded](../praktikum2_pettus)
 * [Kodutöö](../praktikum2_kodutoo)
-    * Tähtaeg 23.02.2021 kell 23:59.
+    * Tähtaeg 23.02.2022 kell 23:59.
 
 ## Praktikum 3
 
-23.02.2021
+Nädal 26
 
 Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused paketiga shiny. Näide: ÕISi tagasiside visualiseerimine. 
 
@@ -55,23 +55,23 @@ Joonised paketiga ggplot2: erinevad joonisetüübid. Interaktiivsed rakendused p
 		* [_Eelmise punkti detailsem seletus_](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary)
 * [Õppetulemuste visualiseerimise ülesanded](../praktikum3_oppeained)
 * [Kodutöö](../praktikum3_kodutoo)
-    * Tähtaeg 02.03.2021 kell 23:59.
+    * Tähtaeg 02.03.2022 kell 23:59.
 
 
 ## Praktikum 4
 
-02.03.2021
+Nädal 27
 
 Mittestandardne graafika. Kuidas teha sama häid jooniseid nagu NY Times seda teeb? Näide: NBA andmestik.
 
 * [NBA ülesanded](../praktikum4_nba)
 * [Lennuliikluse visualiseerimise ülesanded](../praktikum4_geo)
 * [Kodutöö](../praktikum4_kodutoo)
-    * Tähtaeg 09.03.2021 kell 23:59.
+    * Tähtaeg 09.03.2022 kell 23:59.
 
 ## Praktikum 5
 
-09.03.2021
+Nädal 28
 
 Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
 
@@ -79,11 +79,11 @@ Andmete kraapimine veebist. Näide: Riigikogu saadikute hääletamismustrid.
     * [rvest minimalistlik näide](../praktikum5_rvest_minimal)
 * [Veebi kraapimise ülesanded](../praktikum5_web)
 * [Kodutöö](../praktikum5_kodutoo)
-    * Tähtaeg 16.03.2021 kell 23:59.
+    * Tähtaeg 16.03.2022 kell 23:59.
 
 ## Praktikum 6
 
-16.03.2021
+Nädal 29
 
 Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletamismustrid. Käsitsi kirjutatud numbrite andmestik.
 
@@ -93,11 +93,11 @@ Heatmap. Peakomponentanalüüs. Näide (jätkub): Riigikogu saadikute hääletam
 * [Käsitsi kirjutatud numbritel põhinevad ülesanded](../praktikum6_numbrid)
 * [Riigikogu saadikute hääletusmustrite analüüs](../praktikum6_polaarsus)
 * [Kodutöö](../praktikum6_kodutoo)
-    * Tähtaeg 23.03.2021 kell 23:59.
+    * Tähtaeg 23.03.2022 kell 23:59.
 
 ## Praktikum 7
 
-23.03.2021
+Nädal 30
 
 Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja statistika (ehk kuidas ennustada surma).
 
@@ -105,20 +105,20 @@ Logistiline regressioon. Mitmese testimise probleem. Näide: biomarkerid ja stat
     * [Logistilise regressiooni minimalistlik näide](../praktikum7_logreg_minimal)
 * [Biomarkerite abil surma prognoosimine](../praktikum7_biomarkerid)
 * [Kodutöö](../praktikum7_kodutoo)
-    * Tähtaeg 30.03.2021 kell 23:59.
+    * Tähtaeg 30.03.2022 kell 23:59.
 
 ## Praktikum 8
 
-30.03.2021
+Nädal 31
 
 Doping ja statistika. Statistiline test. Näide: ühe dopingujuhtumi analüüs.
 
 * [Dopingutesti ülesanded](../praktikum8_doping)
 * [Kodutöö](../praktikum8_kodutoo)
-    * Tähtaeg 06.04.2021 kell 23:59.
+    * Tähtaeg 06.04.2022 kell 23:59.
 	
 
-## Lisapraktikum
+<!-- ## Lisapraktikum -->
 
-[Sarnasusdiagramm](../praktikumLisa_chorddiag)
+<!-- [Sarnasusdiagramm](../praktikumLisa_chorddiag) -->
 
