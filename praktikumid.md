@@ -3,7 +3,7 @@ layout: page
 title: Praktikumimaterjalid
 ---
 
-Praktikumi materjalid täienevad jooksvalt, 2020. aasta materjalidega saab tutvuda [siin](../../2020/praktikumid/).
+Praktikumi materjalid täienevad jooksvalt, 2021. aasta materjalidega saab tutvuda [siin](../../2021/praktikumid/).
 
 ## Praktikum 1
 
@@ -16,8 +16,8 @@ Pakett knitr. Markdown. Pakett dplyr. Näide: automaatne aktsiaturu ülevaade.
 * VÕI [R kassidele](https://rforcats.net/)
 
 * Praktikumis kasutatud materjalid:
-    * [Slaidid](../pr1_esitlus.pdf) (korralduslik info)
-    * Sisenege [Socrative](https://b.socrative.com/login/student/) keskkonda
+    <!-- * [Slaidid](../pr1_esitlus.pdf) (korralduslik info) -->
+    <!-- * Sisenege [Socrative](https://b.socrative.com/login/student/) keskkonda -->
     * [knitr ja R Markdown sissejuhatus](../praktikum1_knitr)
     * [dplyr minimalistlik näide](../praktikum1_dplyr)
 * [Automaatne aktsiaturu ülevaade](../praktikum1_aktsiad)
