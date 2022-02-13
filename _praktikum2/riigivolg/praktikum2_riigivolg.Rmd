@@ -17,7 +17,7 @@ Juba 9. aprillil 2013 kasutas Olli Rehn oma kõnes Rahvusvahelisele Tööorganis
 
 Kati tundis, et ta oma tööd hästi teinud ja unistas aastalõpu boonusest. Tema sisemine rahulolu jäi aga üürikeseks. Majandusteadlased (Herndon, Ash, Pollin) ülikoolist UMass Amherst avaldasid teadusartikli, kus väitsid, et Reinhart-Rogoffi metoodikas on tõsiseid vigu sees, alustades Exceli arvutusveast, andmete väljajätmisest ja valest kaalumismeetodist. Majandusteemalised ajalehed olid täis kriitilisi kommentaare, sest Exceli viga on ju hoomatav kõigile.
 
-![Näide](reinhart_rogoff_coding_error.png)
+![](reinhart_rogoff_coding_error.png)
 
 Moodustati kriisikomisjon, mida pandi juhtima Kati. Vaja on teha suurele hulgale poliitikutele võimalikult lihtsasti selgeks, mille vastu eksisid Reinhart-Rogoff ja kui palju esialgsed tulemused muutusid.
 
@@ -45,7 +45,7 @@ Juhised:
 * kaalumisviisid  
 HAP kaalub igas kategoorias andmepunkte võrdselt (ehk võtab tavalise aritmeetilise keskmise), RR arvutab igas grupis riikide keskmise ja võtab neist aritmeetilise keskmise.
 
-![Näide](kaalumine.png)
+![](kaalumine.png)
 
 * RR-i tulemuste reprodutseerimiseks jäta arvutustest välja andmepunktid, mis jäid välja Exceli vea tõttu (vt tunnus *exceli_viga*) ja andmete puudumise tõttu (vt tunnus *valikuline*).
 
@@ -97,7 +97,7 @@ Järgnevalt püüame leida parima viisi, kuidas efektiivselt visualiseerida
 
 HAPi raportis kasutati vasakpoolset joonist, et visualiseerida RR ja HAP tulemuste erinevusi. NY times pani samale joonisele aga mediaani ja keskmise (parempoolne joonis)! Paku välja parem visualiseerimise idee, kuidas muuta arusaadavaks tulemuste erinevus.
 
-![Näide](HAP_NYtimes.png)
+![](HAP_NYtimes.png)
 
 <!-- > Praktikumis pakuti välja sarnane joonis NY Times joonisega, aga joondiagrammi asemel kasutame tulpdiagrammi ning mediaanide ja aritmeetiliste keskmiste kohta teeme eraldi joonised. Kuna see meetod nõuab oskusi, mida me ei käsitlenud tunni raames, jääb see ülesanne boonusülesandeks. -->
 
@@ -142,9 +142,9 @@ Skeem:
 * Nullhüpotees on, et võlakoorma-SKP suhte ja SKP kasvu vahel seos puudub. 
 * Genereerime meie andmetest permuteerimise teel sellise andmestiku, mis vastab nullhüpoteesile. Näiteks võib fikseerida SKP kasvu väärtused ning neile vastavusse seatavad võlakoorma-SKP suhte väärtused permuteerida. (Näpunäide: permuteerimisel on kasuks funktsioon `sample`.) Järgneval joonisel on näidatud tegelik andmestik ning permuteeritud andmestik (permuteeritud andmestik on saadud, kui on fikseeritud x-tunnus, aga y-tunnused on segamini aetud.)
 
-![Näide](permuteeritud_vs_tegelik_andmestik.png)
+![](permuteeritud_vs_tegelik_andmestik.png)
 
 * Leidke eelmises punktis genereeritud andmestikul `stat_smooth` hinnang. 
 * Korrake eelnevat näiteks 100 korral ning kandke leitud 100 joont joonisele. Võrdluseks lisage esialgsetel andmetel leitud joon teise värviga. Lõpptulemus võiks tulla sarnane järgmise joonisega:
 
-![Näide](permuteerimine_tulemus.png)
+![](permuteerimine_tulemus.png)
