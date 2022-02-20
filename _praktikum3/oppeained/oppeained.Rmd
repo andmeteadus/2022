@@ -22,17 +22,17 @@ Selles praktikumis uurimegi:
 
 ### Tutvumine andmestikuga
 
-Laadi alla andmestik [UT_16_17_hinded.csv](../data/UT_16_17_hinded.csv). Selles andmestikus on 2016/2017 õppeaasta kõigi TÜ  õppeainete kohta kirjas üliõpilaste õppetulemuste jaotus. Lisaks on teada 
+*NB!* Antud andmestikke (UT_19_20_hinded.csv ja UT_19_20_tagasiside.csv) võib kasutada üksnes õppetöö eesmärgil, andmete kasutamine muul eesmärgil on keelatud!
+
+Laadi alla andmestik [UT_19_20_hinded.csv](../data/UT_19_20_hinded.csv). Selles andmestikus on 2019/2020 õppeaasta kõigi TÜ  õppeainete kohta kirjas üliõpilaste õppetulemuste jaotus. Lisaks on teada 
 
 * semester (S - sügis/K - kevad)
-* valdkond (tunnus *AINE_STR*)
+* valdkond (tunnus *AINE_VK*)
     * HV	humanitaarteaduste- ja kunstide valdkond
     * SV	sotsiaalteaduste valdkond
     * MV	meditsiiniteaduste valdkond
     * LT	loodus- ja täppisteaduste valdkond
-    * GV  Eesti geenivaramu
-    * OO  Õppeosakond
-* alamüksus, üldiselt instituut (tunnus *UKSUS*, 2018. aasta kodeering)
+* alamüksus, üldiselt instituut (tunnus *AINE_INST*)
 * aine kood
 * aine nimi
 * õppeainele registreerunud üliõpilaste õppetulemuste jaotus 
@@ -62,7 +62,7 @@ Juhised:
 * Praegu on õppeaine nimi selline faktor, mille tasemed on tähestikulises järjekorras. Aga ggplot2 joonise jaoks oleks hea, kui see oleks järjestatud keskmise hinde põhjal. (Näpunäide: kasuta funktsiooni `reorder`.)
 * Tee joonis. 
 * Juhul, kui kasutad mõnda tulpdiagrammi, võib horisontaalne esitus osutuda efektiivsemaks kui vertikaalne. Abiks on `coord_flip()`. 
-* Kirjuta eelnev kood funktsiooniks, mille sisendiks sobiks selline andmestik nagu oli failis *UT_16_17_hinded.csv*. Lisaks oleks sisendiks üksus (*UKSUS*) ja semester. Funktsioon peab tagastama ggplot2 joonise. Kontrolli, kas funktsioon töötab. 
+* Kirjuta eelnev kood funktsiooniks, mille sisendiks sobiks selline andmestik nagu oli failis *UT_19_20_hinded.csv*. Lisaks oleks sisendiks üksus (*AINE_INST*) ja semester. Funktsioon peab tagastama ggplot2 joonise. Kontrolli, kas funktsioon töötab. 
 
 ```{r, eval=FALSE}
 plot_oppeained = function(data, yksus, sem){
@@ -162,27 +162,28 @@ Kuva rakenduses oleva staatilise joonise asemel interaktiivne joonis. Kõige lih
 
 Uuri, kas Peetri väited peavad paika. See tähendab, et kas tõepoolest on tal lootust saada ainele paremat tagasisidet, kui selle töömaht on väiksem, kui ette nähtud, ning kui tudengitele panna paremaid hindeid. 
 
-Laadi alla andmestik [UT_16_17_tagasiside.csv](../data/UT_16_17_tagasiside.csv). (Praktikumis kasutatud andmestik oli selle alamandmestik.) Siin on toodud 2016/2017 õppeaasta kõigi TÜ õppeainete kohta (st nii eristava kui ka mitteeristava hindamisega):
+Laadi alla andmestik [UT_19_20_tagasiside.csv](../data/UT_19_20_tagasiside.csv). (Praktikumis kasutatud andmestik oli selle alamandmestik.) Siin on toodud 2019/2020 õppeaasta kõigi TÜ õppeainete kohta (st nii eristava kui ka mitteeristava hindamisega):
 
 * semester (S - sügis/K - kevad)
-* valdkond (tunnus *AINE_STR*)
+* valdkond (tunnus *AINE_VK*)
     * HV	humanitaarteaduste- ja kunstide valdkond
     * SV	sotsiaalteaduste valdkond
     * MV	meditsiiniteaduste valdkond
     * LT	loodus- ja täppisteaduste valdkond
-    * GV  Eesti geenivaramu
-    * OO  Õppeosakond
-* alamüksus, üldiselt instituut (tunnus *UKSUS*, 2018. aasta kodeering)
-* aine kood    
+* alamüksus, üldiselt instituut (tunnus *AINE_INST*)
+* aine kood
 * aine nimi
 * õppeaine töömahtu puudutava tagasiside küsimuse vastuste jaotus
-    - *toomaht_1* - aine töömaht oli tunduvalt väiksem
-    - *toomaht_2* - aine töömaht oli mõnevõrra väiksem
-    - *toomaht_3* - aine töömaht oli selline, nagu ette nähtud
-    - *toomaht_4* - aine töömaht oli mõnevõrra suurem
-    - *toomaht_5* - aine töömaht oli tunduvalt suurem
-* tagasiside küsimuse "Kokkuvõttes hindan antud õppeainet hindega" tulemuste jaotus
-    - veerud *hinne_ainele_A*, ..., *hinne_ainele_F*
+    - *toomaht_0* - Ei kehti
+    - *toomaht_1* - aine töömaht oli liiga suur
+    - *toomaht_2* - aine töömaht oli paras
+    - *toomaht_3* - aine töömaht oli liiga väike
+* tagasiside küsimuse "Kokkuvõttes oli õppeaine minu jaoks väärtuslik." tulemuste jaotus
+    - *vaartus_0* - Ei kehti
+    - *vaartus_1* - Ei nõustu
+    - *vaartus_2* - Pigem ei nõustu
+    - *vaartus_3* - Pigem nõustun
+    - *vaartus_4* - Nõustun
 * õppeainele registreerunud üliõpilaste õppetulemuste jaotus 
     - eristava hindamisega ainete jaoks veerud *hinne_A*, ..., *hinne_F* ja *mitteilmunud*
     - mitteeristava hindamisega ainete jaoks veerud *arvestatud*, *mittearvestatud* ja *mitteilmunud*
