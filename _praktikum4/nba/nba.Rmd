@@ -30,7 +30,7 @@ Selles praktikumis uurime, kuidas teha sarnast joonist R-i vahenditega.
 ```
 
 Kasutame NBA 2020/21 hooaja andmeid.
-Lae alla vajalikud [NBA 2020/21 hooaja andmed](https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.csv) aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:
+Lae alla vajalikud [NBA 2020/21 hooaja andmed](https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.zip) aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:
 
 ```{r, eval=FALSE}
 # Sea paika töökataloog 
