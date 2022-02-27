@@ -20,18 +20,17 @@ Selles praktikumis uurime, kuidas teha sarnast joonist R-i vahenditega.
 
 ### Tutvumine andmestikuga
 
-Kasutame NBA 2016/17 hooaja andmeid. Selleks installi pakett `NBAapi`.
-
-```{r, eval = FALSE}
-# Vajalik paketi devtools olemasolu
-devtools::install_github("imadmali/NBAapi") 
-library(NBAapi)
-
-#visete andmestik, mis tuli paketiga kaasa
-str(shots_1617) 
+```{r, eval = FALSE, include=FALSE}
+# # Vajalik paketi devtools olemasolu
+# devtools::install_github("imadmali/NBAapi") 
+# library(NBAapi)
+# 
+# #visete andmestik, mis tuli paketiga kaasa
+# str(shots_1617) 
 ```
 
-Või kui paketi laadimine ebaõnnestub, siis lae alla vajalikud [NBA 2016/17 hooaja andmed](https://github.com/andmeteadus/2021/raw/master/data/NBA_16_17.zip) aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:
+Kasutame NBA 2020/21 hooaja andmeid.
+Lae alla vajalikud [NBA 2020/21 hooaja andmed](https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.csv) aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:
 
 ```{r, eval=FALSE}
 # Sea paika töökataloog 
@@ -39,7 +38,7 @@ Või kui paketi laadimine ebaõnnestub, siis lae alla vajalikud [NBA 2016/17 hoo
 setwd(dirname(rstudioapi::getActiveDocumentContext()[[2]]))
 
 # Loe andmed sisse
-nba <- read.csv('NBA_16_17.csv')
+nba <- read.csv('NBA_20_21.csv')
 ```
 
 
