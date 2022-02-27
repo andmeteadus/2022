@@ -64,7 +64,7 @@ if (window.hljs) {
 <p>Selles praktikumis uurime, kuidas teha sarnast joonist R-i vahenditega.</p>
 <div id="tutvumine-andmestikuga" class="section level3">
 <h3>Tutvumine andmestikuga</h3>
-<p>Kasutame NBA 2020/21 hooaja andmeid. Lae alla vajalikud <a href="https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.zip">NBA 2020/21 hooaja andmed</a> aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:</p>
+<p>Kasutame NBA 2020/21 hooaja andmeid. Lae alla vajalikud <a href="https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.zip">NBA 2020/21 hooaja andmed</a> aine kodulehelt, paki fail lahti ja loe andmed järgmise koodiga sisse:</p>
 <pre class="r"><code># Sea paika töökataloog 
 # Kui skripti fail asub samas kaustas andmetega, siis kasuta järgmist koodi.
 setwd(dirname(rstudioapi::getActiveDocumentContext()[[2]]))
@@ -91,7 +91,7 @@ nba &lt;- read.csv(&#39;NBA_20_21.csv&#39;)</code></pre>
 <li>visete arv</li>
 <li>tabavusprotsent</li>
 </ul>
-<p>Tee seda iga algandmestikus oleva mängija puhul, võttes arvesse ka mängija meeskondlikku kuuluvust (mängija võib hooaja keskel meeskonda vahetada).</p>
+<p>Tee seda iga algandmestikus oleva mängija puhul, võttes arvesse ka mängija meeskondlikku kuuluvust (mängija võib hooaja keskel meeskonda vahetada). Salvesta saadud andmestik muutujasse <em>nba_agr</em>.</p>
 <p>Näpunäited:</p>
 <ul>
 <li>uuri, mida teeb käsk <code>round(21:30, -1)</code>.</li>
@@ -104,23 +104,19 @@ nba &lt;- read.csv(&#39;NBA_20_21.csv&#39;)</code></pre>
 <p>Kasuta edasisel visualiseerimisel järgnevat koodi näidist mänguväljaku loomiseks:</p>
 <pre class="r"><code>library(grid) 
 library(jpeg) 
-library(RCurl)
 
-#loome mänguväljaku
-courtImg.URL &lt;- &quot;https://thedatagame.files.wordpress.com/2016/03/nba_court.jpg&quot;
-manguvaljak &lt;- rasterGrob(readJPEG(getURLContent(courtImg.URL)),
-                    width=unit(1,&quot;npc&quot;), height=unit(1,&quot;npc&quot;))
+# mänguväljaku loomine pildi abil
+manguvaljak &lt;- rasterGrob(readJPEG(&quot;nba_court.jpg&quot;), width=unit(1,&quot;npc&quot;), height=unit(1,&quot;npc&quot;))
                     
-valitud_mangija = filter(nba, PLAYER_NAME == &#39;&lt;sinu valitud mängija nimi&gt;&#39;) # Vaheta nimi!
+valitud_mangija_agr = filter(nba_agr, PLAYER_NAME == &#39;LeBron James&#39;) # Vaheta nimi!
 
-valjak &lt;- ggplot(valitud_mangija, aes(x = x, y = y)) + 
+valjak &lt;- ggplot(valitud_mangija_agr, aes(x = x_uus, y = y_uus)) + 
   annotation_custom(manguvaljak, -250, 250, -50, 420) + geom_point()
   
 # sinu kood</code></pre>
 <p>Visualiseeri enda jaoks ülesandes 1 saadud andmeid (valitud mängija korral). Iga diskretiseeritud kastikese kohta joonista ring. Ringi pindala olgu proportsionaalne visete arvuga.</p>
 <p>Näpunäited:</p>
 <ul>
-<li>kasuta selleks käsku <code>scale_size_area()</code> (uuri, mida see teeb)</li>
 <li>määra <code>ylim(-50,300)</code> ja <code>xlim(-250,250)</code> (et ka varupingimeestel või hooaja keskel liitunutel näidatakse ikka tervet väljakut).</li>
 </ul>
 </div>

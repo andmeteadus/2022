@@ -30,7 +30,7 @@ Selles praktikumis uurime, kuidas teha sarnast joonist R-i vahenditega.
 ```
 
 Kasutame NBA 2020/21 hooaja andmeid.
-Lae alla vajalikud [NBA 2020/21 hooaja andmed](https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.zip) aine kodulehelt, paki lahti ja loe järgmise koodiga sisse:
+Lae alla vajalikud [NBA 2020/21 hooaja andmed](https://github.com/andmeteadus/2022/raw/master/data/NBA_20_21.zip) aine kodulehelt, paki fail lahti ja loe andmed järgmise koodiga sisse:
 
 ```{r, eval=FALSE}
 # Sea paika töökataloog 
@@ -66,7 +66,7 @@ Tükid moodusta nii, et ümarda x- ja y-koordinaat kümnelisteni. Iga kastikese 
 * visete arv
 * tabavusprotsent
 
-Tee seda iga algandmestikus oleva mängija puhul, võttes arvesse ka mängija meeskondlikku kuuluvust (mängija võib hooaja keskel meeskonda vahetada).
+Tee seda iga algandmestikus oleva mängija puhul, võttes arvesse ka mängija meeskondlikku kuuluvust (mängija võib hooaja keskel meeskonda vahetada). Salvesta saadud andmestik muutujasse *nba_agr*.
 
 Näpunäited: 
 
@@ -84,16 +84,13 @@ Kasuta edasisel visualiseerimisel järgnevat koodi näidist mänguväljaku loomi
 ```{r,eval=FALSE}
 library(grid) 
 library(jpeg) 
-library(RCurl)
 
-#loome mänguväljaku
-courtImg.URL <- "https://thedatagame.files.wordpress.com/2016/03/nba_court.jpg"
-manguvaljak <- rasterGrob(readJPEG(getURLContent(courtImg.URL)),
-                    width=unit(1,"npc"), height=unit(1,"npc"))
+# mänguväljaku loomine pildi abil
+manguvaljak <- rasterGrob(readJPEG("nba_court.jpg"), width=unit(1,"npc"), height=unit(1,"npc"))
                     
-valitud_mangija = filter(nba, PLAYER_NAME == '<sinu valitud mängija nimi>') # Vaheta nimi!
+valitud_mangija_agr = filter(nba_agr, PLAYER_NAME == 'LeBron James') # Vaheta nimi!
 
-valjak <- ggplot(valitud_mangija, aes(x = x, y = y)) + 
+valjak <- ggplot(valitud_mangija_agr, aes(x = x_uus, y = y_uus)) + 
   annotation_custom(manguvaljak, -250, 250, -50, 420) + geom_point()
   
 # sinu kood
@@ -105,7 +102,6 @@ Visualiseeri enda jaoks ülesandes 1 saadud andmeid (valitud mängija korral). I
 
 Näpunäited: 
 
-* kasuta selleks käsku `scale_size_area()` (uuri, mida see teeb)
 * määra `ylim(-50,300)` ja `xlim(-250,250)` (et ka varupingimeestel või hooaja keskel liitunutel näidatakse ikka tervet väljakut).
 
 
@@ -125,7 +121,6 @@ kolm_suurust = function(andmed, suurus1, suurus2, suurus3, piir1, piir2){
 
 
 Visualiseeri enda jaoks viskepositsioone sarnaselt eelmisele joonisele, kuid nüüd olgu ringidel vaid 3 erinevat suurust.
-
 
 
 ### Ülesanne 1.4 - värvid (1 punkti)
