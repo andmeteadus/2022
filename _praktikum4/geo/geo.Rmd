@@ -68,39 +68,9 @@ gc_points = gcIntermediate(c(lon_delta, lat_delta),
 lines(gc_points)
 ```
 
+
+
 ### Näide2: suurringjoon R-is
-
-Näide, kuidas joonistada suurringjoont R-is. Ühendame Delta maja Eyjafjallajökulliga kasutades `ggmap()` funktsiooni. Loe rohkem `ggmap()` funktsiooni kohta [siit](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf).
-
-**NB! Näites kasutatud Google API tavapäraseks töötamiseks on vaja registreerida Google's tasuline konto!** Otseselt maksma ei pea aga krediitkaardi numbrit on ikka vaja. Seejärel pärida koos väljastatud API võtmega.
-
-```{r, message=FALSE, eval = F}
-library(ggmap)
-library(geosphere)
-
-lat_delta = 58.385582 
-lon_delta = 26.725512
-lat_eyjafjallajokull = 63.37120
-lon_eyjafjallajokull = -19.36480
-
-register_google(key = "...") # Sisesta siia Google'st saadud API võti
-
-map <- get_map(location = 'Europe', zoom = 3 ,source = "google")
-a <- ggmap(map)
-
-gc_points = gcIntermediate(c(lon_delta, lat_delta), 
-                           c(lon_eyjafjallajokull, lat_eyjafjallajokull),
-                           n=50, addStartEnd=TRUE)
-gc = data.frame(gc_points)
-
-a <- a + geom_path(data = gc, aes(x = lon, y = lat, colour = 'red'))
-a
-```
-
-![](google_naide.png "Näide"){width=600px}
-
-
-### Näide3: suurringjoon R-is
 
 Näide, kuidas joonistada suurringjoont R-is. Ühendame Delta maja maailma suurima pitsa sünnikohaga kahutades `leaflet` paketti. Loe rohkem `leaflet`'i kohta [siit.](https://rstudio.github.io/leaflet/)
 
