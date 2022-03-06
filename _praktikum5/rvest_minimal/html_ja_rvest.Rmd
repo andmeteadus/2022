@@ -13,7 +13,10 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 Veebis on aina rohkem andmeid struktureerimata kujul. Näiteks ilmaennustusi, korterite hindu, geograafilist infot, sotsiaalvõrgustike andmeid, valimistulemusi, aktsiahindu või ajalehe artikleid ei ole alati saadaval csv või Exceli failina. Alati on võimalik andmeid manuaalselt kopeerida, aga see on tülikas, aeganõudev ja vigaderohke. Veebilehtedel oleva info automatiseeritud eraldamiseks on suuresti kaks võimalust:
 
 
-1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis. Paljud rakendusliidesed nõuvad autentimist, mille käigus tuleb vastavale saidile kasutaja registreerida. Seejärel saab kasutaja omale unikaalse võtme, mis tuleb lisada tehtavalt http päringule. Üldiselt on populaarsemad rakendusliidesed hästi dokumenteeritud ning juhendit järgides saab andmed ilusti kätte. Siiski leidub ka täielikult avatud rakendusliideseid, mis autentimist ei nõua.
+1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis. 
+
+Paljud rakendusliidesed nõuvad autentimist, mille käigus tuleb vastavale saidile kasutaja registreerida. Seejärel saab kasutaja omale unikaalse võtme, mis tuleb lisada tehtavalt http päringule. 
+Üldiselt on populaarsemad rakendusliidesed hästi dokumenteeritud ning juhendit järgides saab andmed ilusti kätte. Siiski leidub ka täielikult avatud rakendusliideseid, mis autentimist ei nõua.
 
 Erinevaid rakendusliideseid võib leida näiteks [siit](https://github.com/public-apis/public-apis) või [siit](https://apipheny.io/free-api/).
 
@@ -117,7 +120,7 @@ CSS-i õppimiseks on tore *tutorial*:
 
 #### HTML
 
-![alt text](veebi_kraapimine_minimal.png "Näide")
+![](veebi_kraapimine_minimal.png "Näide")
 
 Minimaalne näide, kuidas eelneval pildil näidatud [HTML lähtekoodist](../examples/minimal_html.html) eraldada pealkirja ja lõiku.
 
