@@ -4,15 +4,14 @@ layout: page
 
 Aine läbimiseks tuleb läbi viia kas praktiline andmeanalüüs ning kirjutada saadud tulemustest populaarteaduslikus vormis artikkel või teha Shiny rakendus. Projekti tulem on illustreeritud asjakohaste joonistega ning on arusaadav ka mitte-statistikule. Projekt tuleb esitada paaristööna või kolmekesi. Tulemusi on vaja esitleda suulisel kaitsmisel.
 
-Inspiratsiooniks saab vaadata [2018.](https://andmeteadus.github.io/2018/projektid/),  [2019.](https://andmeteadus.github.io/2019/projektid/) ja [2020.](https://andmeteadus.github.io/2020/projektid/) aasta projekte. 
+Inspiratsiooniks saab vaadata [2019.](https://andmeteadus.github.io/2019/projektid/),  [2020.](https://andmeteadus.github.io/2020/projektid/) ja [2021.](https://andmeteadus.github.io/2021/projektid/) aasta projekte. 
 
 ### Tähtajad 
 
-* Teema valimine - 23.03.2021
-* Projekti esitamise tähtaeg - 11.05.2020 kell 12.15.
-* Projekti tulemuste müümine (st esitlus) - 18.05.2020 kell 12:15 Zoomis.
+* Projekti esitamise tähtaeg - 27.04.2022 kell 23.59.
+* Projektide esitlused - 09.05.2022 (?) - 1. rühm ja ??.??.2022 - LTMS.TK.027
 
-Mõned meie välja pakutud teemad on [siin](https://docs.google.com/spreadsheets/d/1pWFMwq3mPY0OXMGVlFcxJIqnfTv41c8Xvr4rNEOGfpg/edit#gid=0). Teema registreerimine toimub Moodle's Projekti foorumis. Lisa sinna projektiteema, andmete allikas, projekti tegijad ja paari lausega, mida hakkate tegema/analüüsima/lahendama.
+ Projekti saab esitada Moodle's Projekti foorumis. Lisa sinna projektiteema, andmete allikas, projekti tegijad ja tulemus. Vaata, et oleks kindlasti lisatud kõik projekti failid (vajalikud andmed, R-i skriptid, markdown failid jne).
 
 ### Mida on vaja esitada?
 

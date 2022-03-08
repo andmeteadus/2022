@@ -4,11 +4,9 @@ title: Projektid
 ---
 
 <!--Siia riputatakse üles projektid pärast nende laekumisi.
-
-Projekti juhend on leitav [siit](../projekt_juhend/).
 <br><br>-->
 
-
+Projekti juhend on leitav [siit](../projekt_juhend/).
 
 Vt. ka [2021. aasta projekte](https://andmeteadus.github.io/2021/projektid/)
 
