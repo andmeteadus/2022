@@ -12,89 +12,51 @@ opts_chunk$set(warning=FALSE, message=FALSE)
 
 Veebis on aina rohkem andmeid struktureerimata kujul. Näiteks ilmaennustusi, korterite hindu, geograafilist infot, sotsiaalvõrgustike andmeid, valimistulemusi, aktsiahindu või ajalehe artikleid ei ole alati saadaval csv või Exceli failina. Alati on võimalik andmeid manuaalselt kopeerida, aga see on tülikas, aeganõudev ja vigaderohke. Veebilehtedel oleva info automatiseeritud eraldamiseks on suuresti kaks võimalust:
 
-<!-- EI TÖÖTA ENAM
-1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis.
 
-Näiteks soovides kodeerida aadressi *Juhan Liivi 2, Tartu, Tartu linn* laius- ja pikkuskraadideks kasutades Google Geocoding API-t, annab päring "http://maps.googleapis.com/maps/api/geocode/json?address=Juhan+Liivi+2,+Tartu,+Tartu+linn" tulemuseks JSON faili, millest tükikene on näidatud järgnevalt:
+1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis. 
 
+Paljud rakendusliidesed nõuvad autentimist, mille käigus tuleb vastavale saidile kasutaja registreerida. Seejärel saab kasutaja omale unikaalse võtme, mis tuleb lisada tehtavale http päringule. 
+Üldiselt on populaarsemad rakendusliidesed hästi dokumenteeritud ning juhendit järgides saab andmed ilusti kätte. Siiski leidub ka täielikult avatud rakendusliideseid, mis autentimist ei nõua.
 
-```{r, eval=FALSE}
-{
-   "results" : [
-      {
-   
-      # osa teksti on eemaldatud
-   
-         "formatted_address" : "University of Tartu, Juhan Liivi 2, 50409 Tartu, Estonia",
-         "geometry" : {
-            "location" : {
-               "lat" : 58.37824850000001,
-               "lng" : 26.7146733
-            }
-      # osa teksti on eemaldatud
-}
-```
--->
+Erinevaid rakendusliideseid võib leida näiteks [siit](https://github.com/public-apis/public-apis) või [siit](https://apipheny.io/free-api/).
 
-1. **Rakendusliidesed** (*web API*) - struktureeritud http päringud tagastavad andmed (üldjuhul) *JSON* või *XML* formaadis.
+Näide: 
 
-Soovides teada saada Suur-Britannia kriminaalse tegevuse statistikat, saame seda küsida UK politsei veebiliidese kaudu. Veebiaardessile https://data.police.uk/api/crimes-street/burglary? sisestada aasta-kuu, laius- ja pikkuskraadid ja saame kätte selle koha statistika varastamise kohta esitatud teatised. Vastavad 
-```{r}
-library(tidyverse)
+```{r, eval = FALSE}
+#JSON kujul andmed autentimiseta API-st
+
 library(httr)
 library(jsonlite)
-path <- "https://data.police.uk/api/crimes-street/burglary?"
+library(dplyr)
 
-paring <- GET(url = path, 
-               query = list(
-                 lat = 53.421813,
-                 lng = -2.330251,
-                 date = "2018-05")
-               )
-vastus <- content(paring, as = "text", encoding = "UTF-8")
-```
+path <- "http://universities.hipolabs.com/search?country=Estonia"
+paring <- GET(url = path) # http päring veebilehele
+vastus <- content(paring, as = "text", encoding = "UTF-8") # andmete eraldamine päringu vastusest
 
-Tulemuseks on JSON fail (objekt `vastus`), millest tükikene on näidatud järgnevalt (R-is see tekst muidugi nii ilus välja ei näe!):
-```{r eval = F}
-[{...
-  
-  # osa teksti on eemaldatud
-  
-  },
- {
-        "category": "burglary",
-        "location_type": "Force",
-        "location": {
-            "latitude": "53.427603",
-            "street": {
-                "id": 718271,
-                "name": "On or near Priory Road"
-            },
-            "longitude": "-2.308988"
-        },
-        "context": "",
-        "outcome_status": {
-            "category": "Unable to prosecute suspect",
-            "date": "2018-06"
-        },
-        "persistent_id": "97a11bad36eb26b43ecc5b9836cebc08c096215fc82ebd9defdc9840854f0e0d",
-        "id": 64896273,
-        "location_subtype": "",
-        "month": "2018-05"
-    }, 
-  
-  # osa teksti on eemaldatud
-]
-```
-
-JSON failist omakorda info kättesaamine käib järgnevalt:
-```{r}
-andmed <- fromJSON(vastus, flatten = TRUE) %>% 
+andmed <- fromJSON(vastus, flatten = TRUE) %>% # andmete teisendamine JSON kujult tabelisse
   data.frame()
 
-kable(head(select(andmed, month, location.street.name, outcome_status.category)))
 ```
 
+<!--
+
+Näide 2 ([andmed](../data/RESULTS.xml))
+
+
+```{r}
+# XML kujul andmed Eesti valimiste avaandmetest
+# Andmed: KOV2021_election_result_data.zip
+# Aadress: https://www.valimised.ee/et/valimiste-arhiiv/valimiste-avaandmed
+
+library(xml2)
+library(XML)
+
+valimised_paring = read_xml('RESULTS.xml') # andmete sisselugemine
+valimised_xml <- xmlParse(valimised_paring) # andmete eraldamine xml paringust 
+andmed <- xmlToDataFrame(nodes=getNodeSet(valimised_xml, "//person")) # vastavate ridade valik ja andmestikuks teisendamine
+```
+
+-->
 
 2. **Ekraanilt kraapimine** - andmete eraldamine veebilehe lähtekoodist.
 
@@ -158,7 +120,7 @@ CSS-i õppimiseks on tore *tutorial*:
 
 #### HTML
 
-![alt text](veebi_kraapimine_minimal.png "Näide")
+![](veebi_kraapimine_minimal.png "Näide")
 
 Minimaalne näide, kuidas eelneval pildil näidatud [HTML lähtekoodist](../examples/minimal_html.html) eraldada pealkirja ja lõiku.
 

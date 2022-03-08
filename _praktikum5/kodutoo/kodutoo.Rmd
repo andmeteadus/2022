@@ -27,9 +27,13 @@ Järgmises praktikumis kasutame peakomponentanalüüsi, seetõttu seisneb kodut�
 
 Lisaks võid uurida [Explained Visually: Principal Component Analysis](http://setosa.io/ev/principal-component-analysis/)
 
+<!--
+
 # Projekti teema otsimine (**5 boonuspunkti**)
 
 Mõtle välja enda projekti teema ja postita see [Moodle's projekti foorumisse](https://moodle.ut.ee/mod/forum/view.php?id=664413). Kirjuta lühike ülevaade, milles projekt seisneb, kust andmed saad jne. Too välja ka kaasüliõpilaste nimed kellega koos projekti teete. Projekti juhendi leiad [siit](../projekt_juhend/). See "boonusülesanne" jääb üles projekti teemade fikseerimise tähtajani (vt. Moodle'st või projekti juhendist).
+
+-->
 
 # Mida on vaja esitada?
 
