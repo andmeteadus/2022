@@ -9,7 +9,7 @@ Inspiratsiooniks saab vaadata [2019.](https://andmeteadus.github.io/2019/projekt
 ### Tähtajad 
 
 * Projekti esitamise tähtaeg - 27.04.2022 kell 23.59.
-* Projektide esitlused - 09.05.2022 (?) - 1. rühm ja ??.??.2022 - LTMS.TK.027
+* Projektide esitlused - 09.05.2022 (?) - 1. rühm ja 03.05.2022 - LTMS.TK.027
 
  Projekti saab esitada Moodle's Projekti foorumis. Lisa sinna projektiteema, andmete allikas, projekti tegijad ja tulemus. Vaata, et oleks kindlasti lisatud kõik projekti failid (vajalikud andmed, R-i skriptid, markdown failid jne).
 

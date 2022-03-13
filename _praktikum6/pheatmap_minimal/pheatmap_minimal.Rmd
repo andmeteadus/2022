@@ -20,7 +20,7 @@ Tutvume järgnevalt paketiga *pheatmap* (tähendusega *pretty heatmaps*), mille 
 2. Visualiseerida maatriksit, klasterdades kas ainult tema ridu või veerge. 
 3. Visualiseerida maatriksit, klasterdades nii ridu kui ka veerge. 
 
-Sisuliselt tähendab klasterdamine, et sarnased read või veerud paigutatakse lähestikku. See võimaldab näha andmetes mustreid, mis muidu jääks võib-olla märkamata. Et klasterdamisest täpsemalt teada saada, vaata Stanfordi [videot hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc). 
+Sisuliselt tähendab klasterdamine, et sarnased read või veerud paigutatakse lähestikku. See võimaldab näha andmetes mustreid, mis muidu jääks võib-olla märkamata. Et klasterdamisest täpsemalt teada saada, vaata [videot hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=7xHsRkOdVwo&ab_channel=StatQuestwithJoshStarmer). 
 
 ### Näidisandmestiku koostamine
 
@@ -91,9 +91,12 @@ superheat(test,
 ```
 
 3. Interaktiivsed võimalused 
-  - [*d3heatmap*](http://www.htmlwidgets.org/showcase_d3heatmap.html)
+  - [*d3heatmap*](https://github.com/talgalili/d3heatmap)
 
 ```{r, fig.height=4}
+if (!require("devtools")) install.packages("devtools") 
+devtools::install_github("talgalili/d3heatmap") # Paketi allalaadimine
+
 library(d3heatmap)
 d3heatmap(test, Rowv = FALSE, Colv = TRUE, colors="YlOrRd", cellnote = test)
 ```
@@ -105,7 +108,7 @@ library(plotly)
 plot_ly(x=colnames(test), y=rownames(test), z = test, type = "heatmap")
 ```
 
-  - [*highcharter*](http://jkunst.com/highcharter/showcase.html)
+  - [*highcharter*](https://jkunst.com/highcharter/index.html)
 
 ```{r, fig.height=4}
 library(highcharter)

@@ -8,7 +8,7 @@ output:
 # I osa
 
 ### Ülesanne 1.1 (**1 punkt**) 
-Vaata Stanfordi Statistical Learning kursuse videot [hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=Tuuc9Y06tAc).
+Vaata videot [hierarhilise klasterdamise kohta](https://www.youtube.com/watch?v=7xHsRkOdVwo&ab_channel=StatQuestwithJoshStarmer).
 
 Mida (uut) said teada hierarhilisest klasterdamisest?
 
