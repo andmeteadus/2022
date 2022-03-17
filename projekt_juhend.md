@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Aine läbimiseks tuleb läbi viia kas praktiline andmeanalüüs ning kirjutada saadud tulemustest populaarteaduslikus vormis artikkel või teha Shiny rakendus. Projekti tulem on illustreeritud asjakohaste joonistega ning on arusaadav ka mitte-statistikule. Projekt tuleb esitada paaristööna või kolmekesi. Tulemusi on vaja esitleda suulisel kaitsmisel.
+Aine läbimiseks tuleb läbi viia kas praktiline andmeanalüüs ning kirjutada saadud tulemustest populaarteaduslikus vormis artikkel või teha Shiny rakendus. Projekti tulem on illustreeritud asjakohaste joonistega ning on arusaadav ka mitte-statistikule. Projekt tuleb teha 1-3 liikmelises meeskonnas. Tulemusi on vaja esitleda suulisel kaitsmisel.
 
 Inspiratsiooniks saab vaadata [2019.](https://andmeteadus.github.io/2019/projektid/),  [2020.](https://andmeteadus.github.io/2020/projektid/) ja [2021.](https://andmeteadus.github.io/2021/projektid/) aasta projekte. 
 
